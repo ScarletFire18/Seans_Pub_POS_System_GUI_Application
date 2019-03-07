@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" prefHeight="400.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <Label layoutX="54.0" layoutY="20.0" prefWidth="-1.0" text="Welcome to Flanagan's Pub!" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" underline="true" wrapText="false">
+      <font>
+        <Font name="Elephant Italic" size="20.0" />
+      </font>
+    </Label>
+    <VBox alignment="CENTER" fillWidth="true" prefHeight="327.0" prefWidth="164.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="60.0">
+      <children>
+        <Button fx:id="munchiesButton" alignment="CENTER" blendMode="DARKEN" focusTraversable="true" mnemonicParsing="false" prefWidth="131.0" text="Munchies" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" underline="true" wrapText="true">
+          <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" choke="0.2222222222222222" color="#000000c4" height="49.22222222222222" radius="24.11111111111111" width="49.22222222222222" fx:id="x1">
+              <input>
+                <DropShadow height="57.42857142857143" radius="30.74404761904762" spread="0.2698412698412699" width="67.54761904761905">
+                  <input>
+                    <Bloom threshold="0.9851851851851852" />
+                  </input>
+                </DropShadow>
+              </input>
+            </InnerShadow>
+          </effect>
+          <font>
+            <Font name="Elephant" size="12.0" fx:id="x2" />
+          </font>
+        </Button>
+        <Button fx:id="drinksButton" alignment="CENTER" effect="$x1" focusTraversable="true" font="$x2" mnemonicParsing="false" prefWidth="131.0" text="Drinks" textAlignment="CENTER" textFill="BLACK" underline="true" wrapText="true" />
+        <Button fx:id="soupsButton" alignment="CENTER" effect="$x1" focusTraversable="true" font="$x2" mnemonicParsing="false" prefWidth="131.0" text="Soups" textAlignment="CENTER" textFill="BLACK" underline="true" wrapText="true" />
+        <Button fx:id="saladsButton" alignment="CENTER" effect="$x1" focusTraversable="true" font="$x2" mnemonicParsing="false" prefWidth="131.0" text="Salads" textAlignment="CENTER" textFill="BLACK" underline="true" wrapText="true" />
+        <Button fx:id="burgersButton" alignment="CENTER" effect="$x1" focusTraversable="true" font="$x2" mnemonicParsing="false" prefWidth="131.0" text="Burgers" textAlignment="CENTER" textFill="BLACK" underline="true" wrapText="true" />
+        <Button fx:id="sandwichesButton" alignment="CENTER" effect="$x1" focusTraversable="true" font="$x2" mnemonicParsing="false" prefWidth="131.0" text="Sandwiches" textAlignment="CENTER" textFill="BLACK" underline="true" wrapText="true" />
+        <Button fx:id="entreesButton" alignment="CENTER" effect="$x1" focusTraversable="true" font="$x2" mnemonicParsing="false" prefWidth="131.0" text="Entrees" textAlignment="CENTER" textFill="BLACK" underline="true" wrapText="true" />
+      </children>
+    </VBox>
+    <VBox prefHeight="163.0" prefWidth="180.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+      <children>
+        <Label fx:id="itemsLabel" prefWidth="81.0" text="Items:">
+          <font>
+            <Font name="System Bold Italic" size="15.0" fx:id="x3" />
+          </font>
+        </Label>
+        <ScrollPane focusTraversable="false" hbarPolicy="NEVER" pannable="true" prefHeight="200.0" prefWidth="200.0">
+          <content>
+            <AnchorPane id="Content" fx:id="itemsScrollPane" minHeight="0.0" minWidth="0.0" prefHeight="278.0" prefWidth="180.0" />
+          </content>
+          <rotationAxis>
+            <Point3D z="1.0" />
+          </rotationAxis>
+        </ScrollPane>
+        <VBox alignment="CENTER_RIGHT" minHeight="34.0" pickOnBounds="true" prefHeight="84.0" prefWidth="96.0" spacing="5.0">
+          <children>
+            <Label id="subtotal" fx:id="subtotalLabel" alignment="BOTTOM_CENTER" font="$x3" graphicTextGap="4.0" prefWidth="-1.0" text="Subtotal:" />
+            <Label fx:id="taxLabel" alignment="CENTER_RIGHT" font="$x3" graphicTextGap="4.0" prefWidth="-1.0" text="Tax:" />
+            <Label fx:id="totalLabel" alignment="BOTTOM_CENTER" font="$x3" graphicTextGap="4.0" prefWidth="-1.0" text="Total:" />
+          </children>
+          <padding>
+            <Insets />
+          </padding>
+          <VBox.margin>
+            <Insets right="90.0" />
+          </VBox.margin>
+        </VBox>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </VBox>
+  </children>
+  <effect>
+    <DropShadow color="#14ff00" height="255.0" radius="127.0" width="255.0">
+      <input>
+        <InnerShadow choke="0.09523809523809523" color="#0c9900" height="12.93650793650793" radius="5.968253968253965" width="12.93650793650793" />
+      </input>
+    </DropShadow>
+  </effect>
+</AnchorPane>
