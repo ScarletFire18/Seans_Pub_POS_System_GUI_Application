@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="seanspub2.EntreesController">
+   <children>
+      <Label layoutX="287.0" layoutY="28.0" text="Entrees" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="24.0" layoutY="63.0" prefHeight="354.0" prefWidth="301.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Sphagetti Meatballs" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Prime Rib" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Fish and Chips" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Chicken Marsalla" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Surf and Turf" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Chicken Alfredo" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="320.0" layoutY="63.0" prefHeight="354.0" prefWidth="294.0">
+         <children>
+            <Button fx:id="mainButton" mnemonicParsing="false" onAction="#mainButtonPushed" prefHeight="39.0" prefWidth="315.0" text="Back to Main" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

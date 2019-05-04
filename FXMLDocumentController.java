@@ -34,7 +34,7 @@ public class FXMLDocumentController implements Initializable
         @FXML private Button appetizersButton;
         @FXML private Button soupSaladButton;
         @FXML private Button pizzaButton;
-        @FXML private Button sandwichButton;
+        @FXML private Button sandwichesButton;
         @FXML private Button kidsButton;
         @FXML private Button entreesButton;
         @FXML private ComboBox dineComboBox;
@@ -56,34 +56,70 @@ public class FXMLDocumentController implements Initializable
             window.show();
         }
         
-        public void appetizersButtonPushed()
+        public void appetizersButtonPushed(ActionEvent event) throws IOException
         {
+            Parent appetizersParent = FXMLLoader.load(getClass().getResource("Appetizers.fxml"));
+            Scene appetizersScene = new Scene(appetizersParent);
             
+            //This line gets the stage info
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(appetizersScene);
+            window.show();
         }
         
-        public void soupSaladButtonPushed()
+        public void soupSaladButtonPushed(ActionEvent event) throws IOException
         {
+            Parent soupsaladParent = FXMLLoader.load(getClass().getResource("SoupSalad.fxml"));
+            Scene soupsaladScene = new Scene(soupsaladParent);
             
+            //This line gets the stage info
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(soupsaladScene);
+            window.show();
         }
         
-        public void pizzaButtonPushed()
+        public void pizzaButtonPushed(ActionEvent event) throws IOException
         {
+            Parent pizzaParent = FXMLLoader.load(getClass().getResource("Pizza.fxml"));
+            Scene pizzaScene = new Scene(pizzaParent);
             
+            //This line gets the stage info
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(pizzaScene);
+            window.show();
         }
         
-        public void sandwichButtonPushed()
+        public void sandwichesButtonPushed(ActionEvent event) throws IOException
         {
+            Parent sandwichParent = FXMLLoader.load(getClass().getResource("Sandwich.fxml"));
+            Scene sandwichScene = new Scene(sandwichParent);
             
+            //This line gets the stage info
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(sandwichScene);
+            window.show();
         }
         
-        public void kidsButtonPushed()
+        public void kidsButtonPushed(ActionEvent event) throws IOException
         {
+            Parent kidsParent = FXMLLoader.load(getClass().getResource("Kids.fxml"));
+            Scene kidsScene = new Scene(kidsParent);
             
+            //This line gets the stage info
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(kidsScene);
+            window.show();
         }
         
-        public void entreesButtonPushed()
+        public void entreesButtonPushed(ActionEvent event) throws IOException
         {
+            Parent entreesParent = FXMLLoader.load(getClass().getResource("Entrees.fxml"));
+            Scene entreesScene = new Scene(entreesParent);
             
+            //This line gets the stage info
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(entreesScene);
+            window.show();
         }
         
     @Override
