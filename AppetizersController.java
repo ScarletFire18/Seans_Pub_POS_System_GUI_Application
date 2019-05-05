@@ -26,6 +26,13 @@ import javafx.stage.Stage;
 public class AppetizersController implements Initializable {
     
     @FXML private Button mainButton;
+    @FXML private Button wingsButton;
+     @FXML private Button nachosButton;
+     @FXML private Button mozzButton;
+     @FXML private Button crabButton;
+     @FXML private Button skinsButton;
+     @FXML private Button shrimpButton;
+   
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -38,6 +45,35 @@ public class AppetizersController implements Initializable {
             window.show();
         }
 
+      public void wingsPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void nachosButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void mozzButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void crabButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void skinsButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void shrimpButtonPushed(ActionEvent event) 
+        {
+            
+        }
     /**
      * Initializes the controller class.
      */

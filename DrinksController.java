@@ -26,6 +26,12 @@ import javafx.stage.Stage;
 public class DrinksController implements Initializable {
     
      @FXML private Button mainButton;
+     @FXML private Button softButton;
+     @FXML private Button coffeeButton;
+     @FXML private Button teaButton;
+     @FXML private Button beerButton;
+     @FXML private Button wineButton;
+     @FXML private Button mixedButton;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -36,6 +42,36 @@ public class DrinksController implements Initializable {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(drinksScene);
             window.show();
+        }
+      
+       public void softButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void coffeeButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void teaButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void beerButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void wineButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void mixedButtonPushed(ActionEvent event) 
+        {
+            
         }
 
     /**

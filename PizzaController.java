@@ -30,6 +30,11 @@ public class PizzaController implements Initializable {
      */
     
     @FXML private Button mainButton;
+    @FXML private Button cheeseButton;
+     @FXML private Button comboButton;
+     @FXML private Button meatButton;
+     @FXML private Button veggieButton;
+     @FXML private Button whiteButton;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -40,6 +45,31 @@ public class PizzaController implements Initializable {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(pizzaScene);
             window.show();
+        }
+      
+       public void cheeseButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void comboButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void veggieButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void meatButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void whiteButtonPushed(ActionEvent event) 
+        {
+            
         }
     
     @Override

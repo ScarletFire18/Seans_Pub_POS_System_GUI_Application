@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="seanspub2.EntreesController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.EntreesController">
    <children>
       <Label layoutX="287.0" layoutY="28.0" text="Entrees" textAlignment="CENTER" underline="true">
          <font>
@@ -18,12 +17,12 @@
       </Label>
       <VBox layoutX="24.0" layoutY="63.0" prefHeight="354.0" prefWidth="301.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Sphagetti Meatballs" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Prime Rib" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Fish and Chips" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Chicken Marsalla" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Surf and Turf" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Chicken Alfredo" />
+            <Button fx:id="spagButton" mnemonicParsing="false" onAction="#spagButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Sphagetti Meatballs" />
+            <Button fx:id="primeButton" mnemonicParsing="false" onAction="#primeButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Prime Rib" />
+            <Button fx:id="fishButton" mnemonicParsing="false" onAction="#fishButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Fish and Chips" />
+            <Button fx:id="marsalaButton" mnemonicParsing="false" onAction="#marsalaButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Chicken Marsalla" />
+            <Button fx:id="surfButton" mnemonicParsing="false" onAction="#surfButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Surf and Turf" />
+            <Button fx:id="alfredoButton" mnemonicParsing="false" onAction="#alfredoButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Chicken Alfredo" />
          </children>
          <padding>
             <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />

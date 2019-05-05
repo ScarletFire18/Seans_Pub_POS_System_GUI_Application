@@ -27,6 +27,12 @@ import javafx.stage.Stage;
 public class SandwichController implements Initializable {
 
      @FXML private Button mainButton;
+      @FXML private Button tunaButton;
+    @FXML private Button turkeyButton;
+     @FXML private Button hamButton;
+     @FXML private Button meatballButton;
+     @FXML private Button roastbeefButton;
+     @FXML private Button chickenButton;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -37,6 +43,36 @@ public class SandwichController implements Initializable {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(sandwichScene);
             window.show();
+        }
+      
+         public void chickenButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void tunaButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void roastbeefButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void meatballButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void turkeyButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void hamButtonPushed(ActionEvent event) 
+        {
+            
         }
     /**
      * Initializes the controller class.

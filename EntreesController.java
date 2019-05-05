@@ -26,6 +26,12 @@ import javafx.stage.Stage;
 public class EntreesController implements Initializable {
     
      @FXML private Button mainButton;
+     @FXML private Button spagButton;
+     @FXML private Button primeButton;
+     @FXML private Button marsalaButton;
+     @FXML private Button surfButton;
+     @FXML private Button fishButton;
+     @FXML private Button alfredoButton;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -36,6 +42,36 @@ public class EntreesController implements Initializable {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(entreesScene);
             window.show();
+        }
+      
+      public void spagButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void primeButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void marsalaButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void surfButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void fishButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void alfredoButtonPushed(ActionEvent event) 
+        {
+            
         }
 
     /**

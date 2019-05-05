@@ -40,6 +40,7 @@ public class MenuItem
     }
 
     public Float getTax() {
+        tax = price*.05f;
         return tax;
     }
 

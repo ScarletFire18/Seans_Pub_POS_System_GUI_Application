@@ -26,6 +26,11 @@ import javafx.stage.Stage;
 public class KidsController implements Initializable {
 
      @FXML private Button mainButton;
+     @FXML private Button hotdogButton;
+     @FXML private Button pizzaButton;
+     @FXML private Button tendersButton;
+     @FXML private Button macButton;
+     @FXML private Button pbjButton;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -36,6 +41,31 @@ public class KidsController implements Initializable {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(kidsScene);
             window.show();
+        }
+      
+      public void hotdogPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void pizzaButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void tendersButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void pbjButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void macButtonPushed(ActionEvent event) 
+        {
+            
         }
     /**
      * Initializes the controller class.

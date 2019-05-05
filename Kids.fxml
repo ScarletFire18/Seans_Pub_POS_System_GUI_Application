@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="seanspub2.KidsController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.KidsController">
    <children>
       <Label layoutX="287.0" layoutY="28.0" text="Kids" textAlignment="CENTER" underline="true">
          <font>
@@ -18,11 +17,11 @@
       </Label>
       <VBox layoutX="24.0" layoutY="63.0" prefHeight="354.0" prefWidth="301.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Hot Dog" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Kids Cheese Pizza" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Chicken Tenders" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="Mac N Cheese" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="278.0" text="PBJ" />
+            <Button fx:id="hotdogButton" mnemonicParsing="false" onAction="#hotdogPushed" prefHeight="39.0" prefWidth="278.0" text="Hot Dog" />
+            <Button fx:id="pizzaButton" mnemonicParsing="false" onAction="#pizzaButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Kids Cheese Pizza" />
+            <Button fx:id="tendersButton" mnemonicParsing="false" onAction="#tendersButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Chicken Tenders" />
+            <Button fx:id="macButton" mnemonicParsing="false" onAction="#macButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Mac N Cheese" />
+            <Button fx:id="pbjButton" mnemonicParsing="false" onAction="#pbjButtonPushed" prefHeight="39.0" prefWidth="278.0" text="PBJ" />
          </children>
          <padding>
             <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />

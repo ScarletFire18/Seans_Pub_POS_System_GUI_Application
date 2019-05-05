@@ -27,6 +27,11 @@ public class SoupSaladController implements Initializable {
     
     
     @FXML private Button mainButton;
+    @FXML private Button gardenButton;
+     @FXML private Button caesarButton;
+     @FXML private Button chowderButton;
+     @FXML private Button frenchButton;
+     @FXML private Button noodleButton;
     
      public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -37,6 +42,31 @@ public class SoupSaladController implements Initializable {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(ssScene);
             window.show();
+        }
+     
+      public void gardenButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void caesarButtonPushed(ActionEvent event)
+        {
+            
+        }
+       
+       public void frenchButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void chowderButtonPushed(ActionEvent event) 
+        {
+            
+        }
+       
+       public void noodleButtonPushed(ActionEvent event) 
+        {
+            
         }
 
     /**
