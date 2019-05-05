@@ -18,6 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 /**
  * FXML Controller class
@@ -34,6 +36,7 @@ public class SoupSaladController implements Initializable {
     @FXML private Button frenchButton;
     @FXML private Button noodleButton;
     @FXML private ImageView soupsalad;
+    @FXML private TextArea soupsaladTextArea;
     
      public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -46,29 +49,34 @@ public class SoupSaladController implements Initializable {
             window.show();
         }
      
-      public void gardenButtonPushed(ActionEvent event)
+      public void gardenButtonPushed(ActionEvent event) throws IOException
         {
-            
+            MenuItem garden = new MenuItem("Garden Salad", 5.95f, 0.00f);
+            soupsaladTextArea.setText("Garden Salad ordered!");
         }
        
-       public void caesarButtonPushed(ActionEvent event)
+       public void caesarButtonPushed(ActionEvent event) throws IOException
         {
-            
+            MenuItem caesar = new MenuItem("Caesar Salad", 6.95f, 0.00f);
+            soupsaladTextArea.setText("Caesar Salad ordered!");
         }
        
-       public void frenchButtonPushed(ActionEvent event) 
+       public void frenchButtonPushed(ActionEvent event) throws IOException 
         {
-            
+            MenuItem french = new MenuItem("French Onion", 6.00f, 0.00f);
+            soupsaladTextArea.setText("French Onion Soup ordered!");
+        }
+     
+       public void chowderButtonPushed(ActionEvent event) throws IOException 
+        {
+            MenuItem chowder = new MenuItem("Clam Chowder", 6.00f, 0.00f);
+            soupsaladTextArea.setText("Clam chowder ordered!");
         }
        
-       public void chowderButtonPushed(ActionEvent event) 
+       public void noodleButtonPushed(ActionEvent event) throws IOException 
         {
-            
-        }
-       
-       public void noodleButtonPushed(ActionEvent event) 
-        {
-            
+            MenuItem noodle = new MenuItem("Chicken Noodle", 5.00f, 0.00f);
+            soupsaladTextArea.setText("Chicken Noodle Soup ordered!");
         }
 
     /**

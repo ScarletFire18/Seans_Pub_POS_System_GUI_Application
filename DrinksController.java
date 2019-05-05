@@ -16,17 +16,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 /**
  * FXML Controller class
  *
  * @author sflana044
  */
-public class DrinksController implements Initializable {
-    
-    private MenuItem selectedMenuItem;
+public class DrinksController implements Initializable 
+{
      @FXML private Button mainButton;
      @FXML private Button softButton;
      @FXML private Button coffeeButton;
@@ -34,6 +34,7 @@ public class DrinksController implements Initializable {
      @FXML private Button beerButton;
      @FXML private Button wineButton;
      @FXML private Button mixedButton;
+     @FXML private TextArea drinkTextArea;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -46,34 +47,41 @@ public class DrinksController implements Initializable {
             window.show();
         }
       
-       public void softButtonPushed(ActionEvent event) 
+       public void softButtonPushed(ActionEvent event) throws IOException 
         {
+            MenuItem soft = new MenuItem("Soft Drink", 2.00f, 0.00f);
+            drinkTextArea.setText("Soft Drink ordered!");
+        }
+       
+       public void coffeeButtonPushed(ActionEvent event) throws IOException 
+        {
+            MenuItem coffee = new MenuItem("Coffee", 1.50f, 0.00f);
+            drinkTextArea.setText("Coffee ordered!");
+        }
+       
+       public void teaButtonPushed(ActionEvent event) throws IOException 
+        {
+            MenuItem tea = new MenuItem("Tea", 1.95f, 0.00f);
+            drinkTextArea.setText("Tea ordered!");
             
         }
        
-       public void coffeeButtonPushed(ActionEvent event)
+       public void beerButtonPushed(ActionEvent event) throws IOException 
         {
-            
+            MenuItem beer = new MenuItem("Beer", 4.00f, 0.00f);
+            drinkTextArea.setText("Beer ordered!");
         }
        
-       public void teaButtonPushed(ActionEvent event)
+       public void wineButtonPushed(ActionEvent event) throws IOException 
         {
-            
+            MenuItem wine = new MenuItem("Wine", 5.00f, 0.00f);
+            drinkTextArea.setText("Wine ordered!");
         }
        
-       public void beerButtonPushed(ActionEvent event) 
+       public void mixedButtonPushed(ActionEvent event) throws IOException 
         {
-            
-        }
-       
-       public void wineButtonPushed(ActionEvent event) 
-        {
-            
-        }
-       
-       public void mixedButtonPushed(ActionEvent event) 
-        {
-            
+            MenuItem mixed = new MenuItem("Mixed Drink", 6.00f, 0.00f);
+            drinkTextArea.setText("Mixed Drink ordered!");
         }
 
     /**
@@ -83,9 +91,4 @@ public class DrinksController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) 
     {
     }    
-    
-    public void initData(MenuItem menuItem)
-    {
-        selectedMenuItem = menuItem; 
-    }
 }

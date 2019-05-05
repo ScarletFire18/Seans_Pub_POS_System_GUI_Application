@@ -18,6 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 /**
  * FXML Controller class
@@ -34,6 +36,7 @@ public class EntreesController implements Initializable {
      @FXML private Button fishButton;
      @FXML private Button alfredoButton;
      @FXML private ImageView entree;
+     @FXML private TextArea entreeTextArea;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -46,34 +49,40 @@ public class EntreesController implements Initializable {
             window.show();
         }
       
-      public void spagButtonPushed(ActionEvent event) 
+      public void spagButtonPushed(ActionEvent event) throws IOException 
         {
-            
+            MenuItem spag = new MenuItem("Sphagetti MB", 12.50f, 0.00f);
+            entreeTextArea.setText("Spaghetti ordered!");
         }
        
-       public void primeButtonPushed(ActionEvent event)
+       public void primeButtonPushed(ActionEvent event) throws IOException
         {
-            
+            MenuItem prime = new MenuItem("Prime Rib", 18.00f, 0.00f);
+            entreeTextArea.setText("Prime Rib ordered!");
         }
        
-       public void marsalaButtonPushed(ActionEvent event)
+       public void marsalaButtonPushed(ActionEvent event) throws IOException
         {
-            
+            MenuItem marsala = new MenuItem("Chix Marsala", 16.95f, 0.00f);
+            entreeTextArea.setText("Chicken Marsala ordered!");
+        }
+  
+       public void surfButtonPushed(ActionEvent event) throws IOException 
+        {
+            MenuItem surf = new MenuItem("Surf and Turf", 24.50f, 0.00f);
+            entreeTextArea.setText("Surf and Turf ordered!");
         }
        
-       public void surfButtonPushed(ActionEvent event) 
+       public void fishButtonPushed(ActionEvent event) throws IOException 
         {
-            
+            MenuItem fish = new MenuItem("Fish and Chips", 14.50f, 0.00f);
+            entreeTextArea.setText("Fish and Chips ordered!");
         }
        
-       public void fishButtonPushed(ActionEvent event) 
+       public void alfredoButtonPushed(ActionEvent event) throws IOException 
         {
-            
-        }
-       
-       public void alfredoButtonPushed(ActionEvent event) 
-        {
-            
+            MenuItem alfredo = new MenuItem("Chix Alfredo", 16.95f, 0.00f);
+            entreeTextArea.setText("Chicken Alfredo ordered!");
         }
 
     /**

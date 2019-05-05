@@ -51,12 +51,6 @@ public class FXMLDocumentController implements Initializable
         @FXML private TableColumn<MenuItem, Float> priceColumn;
         @FXML private TableColumn<MenuItem, Float> taxColumn;
         
-        
-        public void totalTable()
-        {
-            
-        }
-        
         public void dineComboBoxSelected()
         {
             orderTextArea.setText(dineComboBox.getValue().toString());
@@ -159,62 +153,7 @@ public class FXMLDocumentController implements Initializable
         //Method returns an ObservableList (like ArrayList for GUI) of MenuItem Objects
         public ObservableList<MenuItem> getMenuItem() throws IOException
         {
-            ObservableList<MenuItem> menuItem = FXCollections.observableArrayList();
-            
-            //Drinks
-            menuItem.add(new MenuItem("Soft Drink", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Tea", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Coffee", 1.50f, 0.00f));
-            menuItem.add(new MenuItem("Beer", 4.00f, 0.00f));
-            menuItem.add(new MenuItem("Wine", 5.00f, 0.00f));
-            menuItem.add(new MenuItem("Mixed Drink", 6.00f, 0.00f));
-            
-            //Appetizers
-            menuItem.add(new MenuItem("Wings", 8.00f, 0.00f));
-            menuItem.add(new MenuItem("Potato Skins", 6.50f, 0.00f));
-            menuItem.add(new MenuItem("Nachos", 7.50f, 0.00f));
-            menuItem.add(new MenuItem("Shrimp Cocktail", 9.95f, 0.00f));
-            menuItem.add(new MenuItem("Crab Dip", 8.50f, 0.00f));
-            menuItem.add(new MenuItem("Mozz Sticks", 7.00f, 0.00f));
-            
-            //SoupSalad
-            menuItem.add(new MenuItem("Garden Salad", 5.95f, 0.00f));
-            menuItem.add(new MenuItem("Caesar Salad", 6.95f, 0.00f));
-            menuItem.add(new MenuItem("Clam Chowder", 6.00f, 0.00f));
-            menuItem.add(new MenuItem("French Onion", 6.00f, 0.00f));
-            menuItem.add(new MenuItem("Chicken Noodle", 5.00f, 0.00f));
-            
-            //Pizza
-            menuItem.add(new MenuItem("Cheese Pizza", 9.50f, 0.00f));
-            menuItem.add(new MenuItem("Combo Pizza", 14.00f, 0.00f));
-            menuItem.add(new MenuItem("Veggie Pizza", 12.00f, 0.00f));
-            menuItem.add(new MenuItem("Meatlovers Pizza", 16.00f, 0.00f));
-            menuItem.add(new MenuItem("White Chicken Pizza", 15.00f, 0.00f));
-            
-            //Sandwiches
-            menuItem.add(new MenuItem("Soft Drink", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Tea", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Coffee", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Beer", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Wine", 1.95f, 0.00f));
-            menuItem.add(new MenuItem("Mixed Drink", 1.95f, 0.00f));
-            
-            //Kids
-            menuItem.add(new MenuItem("Kids Dog", 4.95f, 0.00f));
-            menuItem.add(new MenuItem("Kids Pizza", 5.50f, 0.00f));
-            menuItem.add(new MenuItem("Kids Tenders", 5.50f, 0.00f));
-            menuItem.add(new MenuItem("Kids MacnChz", 5.00f, 0.00f));
-            menuItem.add(new MenuItem("Kids PBJ", 4.00f, 0.00f));
-            
-            
-            //Entrees
-            menuItem.add(new MenuItem("Sphagetti MB", 12.50f, 0.00f));
-            menuItem.add(new MenuItem("Prime Rib", 18.00f, 0.00f));
-            menuItem.add(new MenuItem("Fish and Chips", 14.50f, 0.00f));
-            menuItem.add(new MenuItem("Chix Marsala", 16.95f, 0.00f));
-            menuItem.add(new MenuItem("Surf and Turf", 24.50f, 0.00f));
-            menuItem.add(new MenuItem("Chix Alfredo", 16.95f, 0.00f));
-                    
+            ObservableList<MenuItem> menuItem = FXCollections.observableArrayList();  
    
             return menuItem;
         }

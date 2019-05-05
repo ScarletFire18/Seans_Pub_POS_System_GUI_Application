@@ -18,6 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.control.TextArea;
+
 
 /**
  * FXML Controller class
@@ -34,8 +36,9 @@ public class AppetizersController implements Initializable{
      @FXML private Button skinsButton;
      @FXML private Button shrimpButton;
      @FXML private ImageView appetizer;
+     @FXML private TextArea appetizerTextArea;
      
-     private MenuItem selectedMenuItem;
+     
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -50,31 +53,41 @@ public class AppetizersController implements Initializable{
 
       public void wingsPushed(ActionEvent event) throws IOException 
         {
-            //menuItem.add(new MenuItem("Wings", 8.00f, 0.00f));
+            MenuItem wings = new MenuItem("Wings", 8.00f, 0.00f);
+            appetizerTextArea.setText("Wings ordered!");
         }
        
-       public void nachosButtonPushed(ActionEvent event)
+       public void nachosButtonPushed(ActionEvent event) throws IOException 
         {
-            //menuItem.add(new MenuItem("Nachos", 7.50f, 0.00f));
+            MenuItem nachos = new MenuItem("Nachos", 7.50f, 0.00f);
+            appetizerTextArea.setText("Nachos ordered!");
         }
        
-       public void mozzButtonPushed(ActionEvent event)
+       public void mozzButtonPushed(ActionEvent event) throws IOException 
         {
+            MenuItem mozz = new MenuItem("Mozz Sticks", 7.00f, 0.00f);
+            appetizerTextArea.setText("Mozz Sticks ordered!");
             //menuItem.add(new MenuItem("Mozz Sticks", 7.00f, 0.00f));
         }
        
-       public void crabButtonPushed(ActionEvent event) 
+       public void crabButtonPushed(ActionEvent event)  throws IOException 
         {
+            MenuItem crab = new MenuItem("Crab Dip", 8.50f, 0.00f);
+            appetizerTextArea.setText("Crab Dip ordered!");
             //menuItem.add(new MenuItem("Crab Dip", 8.50f, 0.00f));
         }
        
-       public void skinsButtonPushed(ActionEvent event) 
+       public void skinsButtonPushed(ActionEvent event) throws IOException 
         {
+            MenuItem skins = new MenuItem("Potato Skins", 6.50f, 0.00f);
+            appetizerTextArea.setText("Potato Skins ordered!");
             //menuItem.add(new MenuItem("Potato Skins", 6.50f, 0.00f));
         }
        
-       public void shrimpButtonPushed(ActionEvent event) 
+       public void shrimpButtonPushed(ActionEvent event) throws IOException 
         {
+            MenuItem shrimp = new MenuItem("Shrimp Cocktail", 9.95f, 0.00f);
+            appetizerTextArea.setText("Shrimp Cocktail ordered!");
             //menuItem.add(new MenuItem("Shrimp Cocktail", 9.95f, 0.00f));
         }
     /**
