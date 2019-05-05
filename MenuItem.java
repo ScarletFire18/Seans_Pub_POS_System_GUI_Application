@@ -5,7 +5,9 @@
  */
 package seanspub2;
 
+import java.io.IOException;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 
 /**
  *
@@ -16,7 +18,7 @@ public class MenuItem
     private SimpleStringProperty itemDescription;
     private float price, tax;
     
-    public MenuItem(String name, Float price, Float tax)
+    public MenuItem(String name, Float price, Float tax) throws IOException
     {
         this.itemDescription = itemDescription;
         this.price = price;

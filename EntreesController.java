@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -32,6 +33,7 @@ public class EntreesController implements Initializable {
      @FXML private Button surfButton;
      @FXML private Button fishButton;
      @FXML private Button alfredoButton;
+     @FXML private ImageView entree;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {

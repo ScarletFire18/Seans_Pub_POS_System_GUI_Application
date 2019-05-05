@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,14 +10,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.KidsController">
+<AnchorPane id="AnchorPane" prefHeight="711.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.KidsController">
    <children>
-      <Label layoutX="287.0" layoutY="28.0" text="Kids" textAlignment="CENTER" underline="true">
-         <font>
-            <Font name="System Italic" size="24.0" />
-         </font>
-      </Label>
-      <VBox layoutX="24.0" layoutY="63.0" prefHeight="354.0" prefWidth="301.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="63.0" prefHeight="644.0" prefWidth="301.0" spacing="20.0">
          <children>
             <Button fx:id="hotdogButton" mnemonicParsing="false" onAction="#hotdogPushed" prefHeight="39.0" prefWidth="278.0" text="Hot Dog" />
             <Button fx:id="pizzaButton" mnemonicParsing="false" onAction="#pizzaButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Kids Cheese Pizza" />
@@ -27,12 +24,22 @@
             <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
          </padding>
       </VBox>
-      <VBox layoutX="320.0" layoutY="63.0" prefHeight="354.0" prefWidth="294.0">
+      <VBox alignment="CENTER" layoutX="320.0" prefHeight="711.0" prefWidth="617.0" spacing="25.0">
          <children>
-            <Button fx:id="mainButton" mnemonicParsing="false" onAction="#mainButtonPushed" prefHeight="39.0" prefWidth="315.0" text="Back to Main" />
+            <Label text="Kids" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="System Italic" size="64.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="659.0" fitWidth="561.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/sflana044/Desktop/Seans_Pub_POS_System_GUI_Application-master/sample/kids.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="mainButton" mnemonicParsing="false" onAction="#mainButtonPushed" prefHeight="39.0" prefWidth="234.0" text="Back to Main" />
          </children>
          <padding>
-            <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+            <Insets top="10.0" />
          </padding>
       </VBox>
    </children>

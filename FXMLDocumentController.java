@@ -14,6 +14,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import static javafx.fxml.FXMLLoader.load;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -150,13 +151,13 @@ public class FXMLDocumentController implements Initializable
             taxColumn.setCellValueFactory(new PropertyValueFactory<>("tax"));
             
              //load data
-             totalTable.setItems(getMenuItem());
+             //totalTable.setItems(getMenuItem());
              
              
         }  
     
         //Method returns an ObservableList (like ArrayList for GUI) of MenuItem Objects
-        public ObservableList<MenuItem> getMenuItem()
+        public ObservableList<MenuItem> getMenuItem() throws IOException
         {
             ObservableList<MenuItem> menuItem = FXCollections.observableArrayList();
             

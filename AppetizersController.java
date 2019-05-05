@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -23,7 +24,7 @@ import javafx.stage.Stage;
  *
  * @author sflana044
  */
-public class AppetizersController implements Initializable {
+public class AppetizersController implements Initializable{
     
     @FXML private Button mainButton;
     @FXML private Button wingsButton;
@@ -32,7 +33,9 @@ public class AppetizersController implements Initializable {
      @FXML private Button crabButton;
      @FXML private Button skinsButton;
      @FXML private Button shrimpButton;
-   
+     @FXML private ImageView appetizer;
+     
+     private MenuItem selectedMenuItem;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -45,34 +48,34 @@ public class AppetizersController implements Initializable {
             window.show();
         }
 
-      public void wingsPushed(ActionEvent event) 
+      public void wingsPushed(ActionEvent event) throws IOException 
         {
-            
+            //menuItem.add(new MenuItem("Wings", 8.00f, 0.00f));
         }
        
        public void nachosButtonPushed(ActionEvent event)
         {
-            
+            //menuItem.add(new MenuItem("Nachos", 7.50f, 0.00f));
         }
        
        public void mozzButtonPushed(ActionEvent event)
         {
-            
+            //menuItem.add(new MenuItem("Mozz Sticks", 7.00f, 0.00f));
         }
        
        public void crabButtonPushed(ActionEvent event) 
         {
-            
+            //menuItem.add(new MenuItem("Crab Dip", 8.50f, 0.00f));
         }
        
        public void skinsButtonPushed(ActionEvent event) 
         {
-            
+            //menuItem.add(new MenuItem("Potato Skins", 6.50f, 0.00f));
         }
        
        public void shrimpButtonPushed(ActionEvent event) 
         {
-            
+            //menuItem.add(new MenuItem("Shrimp Cocktail", 9.95f, 0.00f));
         }
     /**
      * Initializes the controller class.

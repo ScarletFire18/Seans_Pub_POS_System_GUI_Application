@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -33,6 +34,7 @@ public class SandwichController implements Initializable {
      @FXML private Button meatballButton;
      @FXML private Button roastbeefButton;
      @FXML private Button chickenButton;
+     @FXML private ImageView sandwich;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {

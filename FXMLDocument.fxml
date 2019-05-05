@@ -8,14 +8,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.FXMLDocumentController">
+<AnchorPane id="AnchorPane" maxHeight="700.0" maxWidth="900.0" prefHeight="375.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.FXMLDocumentController">
    <children>
       <Label fx:id="welcomeLabel" layoutX="190.0" layoutY="37.0" text="Welcome to Flanagan's Pub" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" underline="true">
          <font>
             <Font name="Elephant Italic" size="48.0" />
          </font>
       </Label>
-      <HBox layoutX="37.0" layoutY="111.0" prefHeight="703.0" prefWidth="929.0">
+      <HBox layoutY="112.0" prefHeight="599.0" prefWidth="937.0">
          <children>
             <VBox prefHeight="60.0" prefWidth="250.0" spacing="25.0">
                <children>
@@ -52,13 +52,16 @@
                   <Insets top="110.0" />
                </padding>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="475.0" spacing="10.0">
+            <VBox alignment="CENTER" maxHeight="575.0" prefHeight="500.0" prefWidth="475.0" spacing="10.0">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
-                  <TextArea fx:id="orderTextArea" prefHeight="39.0" prefWidth="455.0" />
-                  <TableView fx:id="totalTable" prefHeight="634.0" prefWidth="455.0">
+                  <TextArea fx:id="orderTextArea" prefHeight="49.0" prefWidth="394.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font></TextArea>
+                  <TableView fx:id="totalTable" prefHeight="465.0" prefWidth="455.0">
                     <columns>
                       <TableColumn fx:id="itemDescriptionColumn" prefWidth="226.0" text="Item" />
                       <TableColumn fx:id="priceColumn" prefWidth="111.0" text="Price" />

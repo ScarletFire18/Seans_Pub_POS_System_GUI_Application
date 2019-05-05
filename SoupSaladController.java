@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -28,10 +29,11 @@ public class SoupSaladController implements Initializable {
     
     @FXML private Button mainButton;
     @FXML private Button gardenButton;
-     @FXML private Button caesarButton;
-     @FXML private Button chowderButton;
-     @FXML private Button frenchButton;
-     @FXML private Button noodleButton;
+    @FXML private Button caesarButton;
+    @FXML private Button chowderButton;
+    @FXML private Button frenchButton;
+    @FXML private Button noodleButton;
+    @FXML private ImageView soupsalad;
     
      public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -73,8 +75,9 @@ public class SoupSaladController implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) 
+    {
+     
     }    
     
 }

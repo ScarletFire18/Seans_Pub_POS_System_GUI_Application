@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -31,6 +32,7 @@ public class KidsController implements Initializable {
      @FXML private Button tendersButton;
      @FXML private Button macButton;
      @FXML private Button pbjButton;
+     @FXML private ImageView kids;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {

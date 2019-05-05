@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -25,6 +26,7 @@ import javafx.stage.Stage;
  */
 public class DrinksController implements Initializable {
     
+    private MenuItem selectedMenuItem;
      @FXML private Button mainButton;
      @FXML private Button softButton;
      @FXML private Button coffeeButton;
@@ -78,8 +80,12 @@ public class DrinksController implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) 
+    {
     }    
     
+    public void initData(MenuItem menuItem)
+    {
+        selectedMenuItem = menuItem; 
+    }
 }

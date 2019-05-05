@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -31,10 +32,11 @@ public class PizzaController implements Initializable {
     
     @FXML private Button mainButton;
     @FXML private Button cheeseButton;
-     @FXML private Button comboButton;
-     @FXML private Button meatButton;
-     @FXML private Button veggieButton;
-     @FXML private Button whiteButton;
+    @FXML private Button comboButton;
+    @FXML private Button meatButton;
+    @FXML private Button veggieButton;
+    @FXML private Button whiteButton;
+    @FXML private ImageView pizza;
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
