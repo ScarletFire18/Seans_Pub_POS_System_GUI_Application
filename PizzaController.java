@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.control.TextArea;
@@ -39,6 +40,20 @@ public class PizzaController implements Initializable {
     @FXML private Button whiteButton;
     @FXML private ImageView pizza;
     @FXML private TextArea pizzaTextArea;
+    @FXML private Label itemDescriptionLabel;
+     @FXML private Label priceLabel;
+     @FXML private Label taxLabel;
+     
+     private MenuItem selectedMenuItem;
+     
+     public void initData(MenuItem menuitem)
+     {
+         selectedMenuItem = menuitem;
+         pizzaTextArea.setText("" + selectedMenuItem.getItemDescription() +" ordered!");
+         itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
+         priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
+         taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+     }
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -54,31 +69,31 @@ public class PizzaController implements Initializable {
        public void cheeseButtonPushed(ActionEvent event) throws IOException
         {
             MenuItem cheese = new MenuItem("Cheese Pizza", 9.50f, 0.00f);
-            pizzaTextArea.setText("Cheese Pizza ordered!");
+            initData(cheese);
         }
        
        public void comboButtonPushed(ActionEvent event) throws IOException
         {
             MenuItem combo = new MenuItem("Combo Pizza", 14.00f, 0.00f);
-            pizzaTextArea.setText("Combo Pizza ordered!");
+            initData(combo);
         }
        
        public void veggieButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem veggie = new MenuItem("Veggie Pizza", 12.00f, 0.00f);
-            pizzaTextArea.setText("Veggie Pizza ordered!");
+            initData(veggie);
         }
        
        public void meatButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem meat = new MenuItem("Meatlovers Pizza", 16.00f, 0.00f);
-            pizzaTextArea.setText("Meatlover Pizza ordered!");
+            initData(meat);
         }
        
        public void whiteButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem white = new MenuItem("White Chicken Pizza", 15.00f, 0.00f);
-            pizzaTextArea.setText("White Pizza ordered!");
+            initData(white);
         }
     
     @Override

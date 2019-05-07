@@ -35,6 +35,20 @@ public class DrinksController implements Initializable
      @FXML private Button wineButton;
      @FXML private Button mixedButton;
      @FXML private TextArea drinkTextArea;
+     @FXML private Label itemDescriptionLabel;
+     @FXML private Label priceLabel;
+     @FXML private Label taxLabel;
+     
+     private MenuItem selectedMenuItem;
+     
+     public void initData(MenuItem menuitem)
+     {
+         selectedMenuItem = menuitem;
+         drinkTextArea.setText("" + selectedMenuItem.getItemDescription() +" ordered!");
+         itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
+         priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
+         taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+     }
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -50,38 +64,38 @@ public class DrinksController implements Initializable
        public void softButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem soft = new MenuItem("Soft Drink", 2.00f, 0.00f);
-            drinkTextArea.setText("Soft Drink ordered!");
+            initData(soft);
         }
        
        public void coffeeButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem coffee = new MenuItem("Coffee", 1.50f, 0.00f);
-            drinkTextArea.setText("Coffee ordered!");
+            initData(coffee);
         }
        
        public void teaButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem tea = new MenuItem("Tea", 1.95f, 0.00f);
-            drinkTextArea.setText("Tea ordered!");
+            initData(tea);
             
         }
        
        public void beerButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem beer = new MenuItem("Beer", 4.00f, 0.00f);
-            drinkTextArea.setText("Beer ordered!");
+            initData(beer);
         }
        
        public void wineButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem wine = new MenuItem("Wine", 5.00f, 0.00f);
-            drinkTextArea.setText("Wine ordered!");
+            initData(wine);
         }
        
        public void mixedButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem mixed = new MenuItem("Mixed Drink", 6.00f, 0.00f);
-            drinkTextArea.setText("Mixed Drink ordered!");
+            initData(mixed);
         }
 
     /**

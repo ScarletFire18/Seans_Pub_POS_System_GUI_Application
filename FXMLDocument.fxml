@@ -61,11 +61,11 @@
                      <font>
                         <Font size="24.0" />
                      </font></TextArea>
-                  <TableView fx:id="totalTable" prefHeight="465.0" prefWidth="455.0">
+                  <TableView fx:id="tableView" prefHeight="465.0" prefWidth="455.0">
                     <columns>
-                      <TableColumn fx:id="itemDescriptionColumn" prefWidth="226.0" text="Item" />
-                      <TableColumn fx:id="priceColumn" prefWidth="111.0" text="Price" />
-                        <TableColumn fx:id="taxColumn" prefWidth="117.0" text="Tax" />
+                      <TableColumn fx:id="itemDescriptionColumn" onEditCommit="#changeMenuItemCellEvent" prefWidth="226.0" text="Item" />
+                      <TableColumn fx:id="priceColumn" onEditStart="#changeMenuItemCellEvent" prefWidth="111.0" text="Price" />
+                        <TableColumn fx:id="taxColumn" onEditCommit="#changeMenuItemCellEvent" onEditStart="#changeMenuItemCellEvent" prefWidth="117.0" text="Tax" />
                     </columns>
                   </TableView>
                </children>

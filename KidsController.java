@@ -35,6 +35,20 @@ public class KidsController implements Initializable {
      @FXML private Button pbjButton;
      @FXML private ImageView kids;
      @FXML private TextArea kidsTextArea;
+     @FXML private Label itemDescriptionLabel;
+     @FXML private Label priceLabel;
+     @FXML private Label taxLabel;
+     
+     private MenuItem selectedMenuItem;
+     
+     public void initData(MenuItem menuitem)
+     {
+         selectedMenuItem = menuitem;
+         kidsTextArea.setText("" + selectedMenuItem.getItemDescription() +" ordered!");
+         itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
+         priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
+         taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+     }
     
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -50,31 +64,31 @@ public class KidsController implements Initializable {
       public void hotdogPushed(ActionEvent event) throws IOException 
         {
             MenuItem hotdog = new MenuItem("Kids Dog", 4.95f, 0.00f);
-            kidsTextArea.setText("Kids Hot Dog ordered!");
+            initData(hotdog);
         }
        
        public void pizzaButtonPushed(ActionEvent event) throws IOException
         {
             MenuItem pizza = new MenuItem("Kids Pizza", 5.50f, 0.00f);
-            kidsTextArea.setText("Kids pizza ordered!");
+            initData(pizza);
         }
 
        public void tendersButtonPushed(ActionEvent event) throws IOException
         {
             MenuItem tenders = new MenuItem("Kids Tenders", 5.50f, 0.00f);
-            kidsTextArea.setText("Kids Tenders ordered!");
+            initData(tenders);
         }
        
        public void pbjButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem pbj = new MenuItem("Kids PBJ", 4.00f, 0.00f);
-            kidsTextArea.setText("Kids PBJ ordered!");
+            initData(pbj);
         }
        
        public void macButtonPushed(ActionEvent event) throws IOException 
         {
             MenuItem mac = new MenuItem("Kids MacnChz", 5.00f, 0.00f);
-            kidsTextArea.setText("Kids Mac ordered!");
+            initData(mac);
         }
     /**
      * Initializes the controller class.

@@ -23,9 +23,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 
 /**
@@ -34,6 +36,8 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable 
     {
+        private MenuItem selectedMenuItem;
+    
         @FXML private Label welcomeLabel;
         @FXML private TextArea orderTextArea;
         @FXML private Button drinksButton;
@@ -46,10 +50,39 @@ public class FXMLDocumentController implements Initializable
         @FXML private ComboBox dineComboBox;
         
         //Configure the table
-        @FXML private TableView<MenuItem> totalTable;
-        @FXML private TableColumn<MenuItem, SimpleStringProperty> itemDescriptionColumn;
+        @FXML private TableView<MenuItem> tableView;
+        @FXML private TableColumn<MenuItem, String> itemDescriptionColumn;
         @FXML private TableColumn<MenuItem, Float> priceColumn;
         @FXML private TableColumn<MenuItem, Float> taxColumn;
+        
+        //This method will allow the user to click a cell and update
+        public void changeMenuItemCellEvent(CellEditEvent editedCell)
+        {
+            MenuItem menuItemSelected = tableView.getSelectionModel().getSelectedItem();
+            menuItemSelected.setItemDescription(editedCell.getNewValue().toString());
+        }
+        
+        public void acceptMenuItem(ActionEvent event) throws IOException
+        {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Appetizers.fxml"));
+            Parent tableViewParent = loader.load();
+            
+            Scene tableViewScene = new Scene(tableViewParent);
+            AppetizersController controller = loader.getController();
+            controller.initData(tableView.getSelectionModel().getSelectedItem());
+        }
+        
+        
+        //This method accepts a menuitem to initialize the tableview
+        public void initData(MenuItem menuItem)
+        {
+            selectedMenuItem = menuItem;
+           //itemDescriptionColumn.setCellValueFactory(selectedMenuItem.getItemDescription());
+           // priceColumn.setCellValueFactory(selectedMenuItem.getPrice());
+           // taxColumn.setCellValueFactory(selectedMenuItem.getTax());
+        }
+        
         
         public void dineComboBoxSelected()
         {
@@ -140,21 +173,26 @@ public class FXMLDocumentController implements Initializable
             dineComboBox.getItems().addAll("Dine In", "Pick Up");
             
             //set up columns
-            itemDescriptionColumn.setCellValueFactory(new PropertyValueFactory<>("itemDescription"));
-            priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-            taxColumn.setCellValueFactory(new PropertyValueFactory<>("tax"));
+            itemDescriptionColumn.setCellValueFactory(new PropertyValueFactory<MenuItem, String>("itemDescription"));
+            priceColumn.setCellValueFactory(new PropertyValueFactory<MenuItem, Float>("price"));
+            taxColumn.setCellValueFactory(new PropertyValueFactory<MenuItem, Float>("tax"));
             
              //load data
-             //totalTable.setItems(getMenuItem());
+             tableView.setItems(getMenuItem());
              
+             //allow table columns to be editable
+             tableView.setEditable(true);
+             itemDescriptionColumn.setCellFactory(TextFieldTableCell.forTableColumn());
              
         }  
     
+    
         //Method returns an ObservableList (like ArrayList for GUI) of MenuItem Objects
-        public ObservableList<MenuItem> getMenuItem() throws IOException
+        public ObservableList<MenuItem> getMenuItem()        
         {
             ObservableList<MenuItem> menuItem = FXCollections.observableArrayList();  
-   
+            menuItem.add(new MenuItem("Frank",2.00f,2.00f));
+            
             return menuItem;
         }
     }
