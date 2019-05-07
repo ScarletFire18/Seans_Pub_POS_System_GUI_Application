@@ -12,26 +12,28 @@
 
 <AnchorPane id="AnchorPane" prefHeight="711.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.PizzaController">
    <children>
-      <VBox alignment="CENTER" layoutX="24.0" layoutY="63.0" prefHeight="628.0" prefWidth="301.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="63.0" prefHeight="628.0" prefWidth="301.0" spacing="10.0">
          <padding>
             <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
          </padding>
          <children>
-            <HBox prefHeight="33.0" prefWidth="118.0" spacing="10.0">
+            <TextArea fx:id="pizzaTextArea" prefHeight="36.0" prefWidth="334.0" />
+            <HBox prefHeight="33.0" prefWidth="290.0" spacing="10.0">
                <children>
-                  <Label prefHeight="27.0" prefWidth="164.0" text="Item Description" />
-                  <Label prefHeight="27.0" prefWidth="71.0" text="Price" />
-                  <Label prefHeight="27.0" prefWidth="89.0" text="Tax" />
+                  <Label prefHeight="27.0" prefWidth="117.0" text="Description" />
+                  <Label prefHeight="27.0" prefWidth="65.0" text="Price" />
+                  <Label prefHeight="27.0" prefWidth="65.0" text="Tax" />
+                  <Label prefHeight="27.0" prefWidth="65.0" text="Total" />
                </children>
             </HBox>
             <HBox prefHeight="33.0" prefWidth="201.0" spacing="10.0">
                <children>
-                  <Label fx:id="itemDescriptionLabel" prefHeight="27.0" prefWidth="167.0" />
-                  <Label fx:id="priceLabel" prefHeight="27.0" prefWidth="85.0" />
-                  <Label fx:id="taxLabel" prefHeight="27.0" prefWidth="80.0" />
+                  <Label fx:id="itemDescriptionLabel" prefHeight="27.0" prefWidth="110.0" />
+                  <Label fx:id="priceLabel" prefHeight="27.0" prefWidth="65.0" />
+                  <Label fx:id="taxLabel" prefHeight="27.0" prefWidth="65.0" />
+                  <Label fx:id="totalLabel" prefHeight="27.0" prefWidth="65.0" />
                </children>
             </HBox>
-            <TextArea fx:id="pizzaTextArea" prefHeight="88.0" prefWidth="251.0" />
             <Button fx:id="cheeseButton" mnemonicParsing="false" onAction="#cheeseButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Cheese" />
             <Button fx:id="veggieButton" mnemonicParsing="false" onAction="#veggieButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Veggie" />
             <Button fx:id="comboButton" mnemonicParsing="false" onAction="#comboButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Combo" />

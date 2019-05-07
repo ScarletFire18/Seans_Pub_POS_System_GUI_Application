@@ -38,6 +38,7 @@ public class KidsController implements Initializable {
      @FXML private Label itemDescriptionLabel;
      @FXML private Label priceLabel;
      @FXML private Label taxLabel;
+     @FXML private Label totalLabel;
      
      private MenuItem selectedMenuItem;
      
@@ -48,6 +49,7 @@ public class KidsController implements Initializable {
          itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
          priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
          taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+         totalLabel.setText(Float.toString(selectedMenuItem.getTotal()));
      }
     
       public void mainButtonPushed(ActionEvent event) throws IOException
@@ -63,31 +65,31 @@ public class KidsController implements Initializable {
       
       public void hotdogPushed(ActionEvent event) throws IOException 
         {
-            MenuItem hotdog = new MenuItem("Kids Dog", 4.95f, 0.00f);
+            MenuItem hotdog = new MenuItem("Kids Dog", 4.95f);
             initData(hotdog);
         }
        
        public void pizzaButtonPushed(ActionEvent event) throws IOException
         {
-            MenuItem pizza = new MenuItem("Kids Pizza", 5.50f, 0.00f);
+            MenuItem pizza = new MenuItem("Kids Pizza", 5.50f);
             initData(pizza);
         }
 
        public void tendersButtonPushed(ActionEvent event) throws IOException
         {
-            MenuItem tenders = new MenuItem("Kids Tenders", 5.50f, 0.00f);
+            MenuItem tenders = new MenuItem("Kids Tenders", 5.50f);
             initData(tenders);
         }
        
        public void pbjButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem pbj = new MenuItem("Kids PBJ", 4.00f, 0.00f);
+            MenuItem pbj = new MenuItem("Kids PBJ", 4.00f);
             initData(pbj);
         }
        
        public void macButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem mac = new MenuItem("Kids MacnChz", 5.00f, 0.00f);
+            MenuItem mac = new MenuItem("Kids MacnChz", 5.00f);
             initData(mac);
         }
     /**

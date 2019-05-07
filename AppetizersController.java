@@ -41,6 +41,7 @@ public class AppetizersController implements Initializable{
      @FXML private Label itemDescriptionLabel;
      @FXML private Label priceLabel;
      @FXML private Label taxLabel;
+     @FXML private Label totalLabel;
      
      private MenuItem selectedMenuItem;
      
@@ -50,7 +51,8 @@ public class AppetizersController implements Initializable{
          appetizerTextArea.setText("" + selectedMenuItem.getItemDescription() +" ordered!");
          itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
          priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
-         taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+         taxLabel.setText(Float.toString(selectedMenuItem.getTax()));
+         totalLabel.setText(Float.toString(selectedMenuItem.getTotal()));
      }
       public void mainButtonPushed(ActionEvent event) throws IOException
         {
@@ -65,37 +67,37 @@ public class AppetizersController implements Initializable{
 
       public void wingsPushed(ActionEvent event) throws IOException 
         {
-            MenuItem wings = new MenuItem("Wings", 8.00f, 0.00f);
+            MenuItem wings = new MenuItem("Wings", 8.00f);
             initData(wings);
         }
        
        public void nachosButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem nachos = new MenuItem("Nachos", 7.50f, 0.00f);
+            MenuItem nachos = new MenuItem("Nachos", 7.50f);
             initData(nachos);
         }
        
        public void mozzButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem mozz = new MenuItem("Mozz Sticks", 7.00f, 0.00f);
+            MenuItem mozz = new MenuItem("Mozz Sticks", 7.00f);
             initData(mozz);
         }
        
        public void crabButtonPushed(ActionEvent event)  throws IOException 
         {
-            MenuItem crab = new MenuItem("Crab Dip", 8.50f, 0.00f);
+            MenuItem crab = new MenuItem("Crab Dip", 8.50f);
             initData(crab);
         }
        
        public void skinsButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem skins = new MenuItem("Potato Skins", 6.50f, 0.00f);
+            MenuItem skins = new MenuItem("Potato Skins", 6.50f);
             initData(skins);
         }
        
        public void shrimpButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem shrimp = new MenuItem("Shrimp Cocktail", 9.95f, 0.00f);
+            MenuItem shrimp = new MenuItem("Shrimp Cocktail", 9.95f);
             initData(shrimp);
         }
     /**

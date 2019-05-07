@@ -40,6 +40,7 @@ public class EntreesController implements Initializable {
      @FXML private Label itemDescriptionLabel;
      @FXML private Label priceLabel;
      @FXML private Label taxLabel;
+     @FXML private Label totalLabel;
      
      private MenuItem selectedMenuItem;
      
@@ -50,6 +51,7 @@ public class EntreesController implements Initializable {
          itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
          priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
          taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+         totalLabel.setText(Float.toString(selectedMenuItem.getTotal()));
      }
     
       public void mainButtonPushed(ActionEvent event) throws IOException
@@ -65,37 +67,37 @@ public class EntreesController implements Initializable {
       
       public void spagButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem spag = new MenuItem("Sphagetti MB", 12.50f, 0.00f);
+            MenuItem spag = new MenuItem("Sphagetti MB", 12.50f);
             initData(spag);
         }
        
        public void primeButtonPushed(ActionEvent event) throws IOException
         {
-            MenuItem prime = new MenuItem("Prime Rib", 18.00f, 0.00f);
+            MenuItem prime = new MenuItem("Prime Rib", 18.00f);
             initData(prime);
         }
        
        public void marsalaButtonPushed(ActionEvent event) throws IOException
         {
-            MenuItem marsala = new MenuItem("Chix Marsala", 16.95f, 0.00f);
+            MenuItem marsala = new MenuItem("Chix Marsala", 16.95f);
             initData(marsala);
         }
   
        public void surfButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem surf = new MenuItem("Surf and Turf", 24.50f, 0.00f);
+            MenuItem surf = new MenuItem("Surf and Turf", 24.50f);
             initData(surf);
         }
        
        public void fishButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem fish = new MenuItem("Fish and Chips", 14.50f, 0.00f);
+            MenuItem fish = new MenuItem("Fish and Chips", 14.50f);
             initData(fish);
         }
        
        public void alfredoButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem alfredo = new MenuItem("Chix Alfredo", 16.95f, 0.00f);
+            MenuItem alfredo = new MenuItem("Chix Alfredo", 16.95f);
             initData(alfredo);
         }
 

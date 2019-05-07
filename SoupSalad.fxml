@@ -12,23 +12,25 @@
 
 <AnchorPane id="AnchorPane" prefHeight="711.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seanspub2.SoupSaladController">
    <children>
-      <VBox alignment="CENTER" layoutX="24.0" layoutY="63.0" prefHeight="645.0" prefWidth="301.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="63.0" prefHeight="645.0" prefWidth="301.0" spacing="10.0">
          <children>
-            <HBox prefHeight="33.0" prefWidth="118.0" spacing="10.0">
+            <TextArea fx:id="soupsaladTextArea" prefHeight="36.0" prefWidth="334.0" />
+            <HBox prefHeight="33.0" prefWidth="290.0" spacing="10.0">
                <children>
-                  <Label prefHeight="27.0" prefWidth="164.0" text="Item Description" />
-                  <Label prefHeight="27.0" prefWidth="71.0" text="Price" />
-                  <Label prefHeight="27.0" prefWidth="89.0" text="Tax" />
+                  <Label prefHeight="27.0" prefWidth="117.0" text="Description" />
+                  <Label prefHeight="27.0" prefWidth="65.0" text="Price" />
+                  <Label prefHeight="27.0" prefWidth="65.0" text="Tax" />
+                  <Label prefHeight="27.0" prefWidth="65.0" text="Total" />
                </children>
             </HBox>
             <HBox prefHeight="33.0" prefWidth="201.0" spacing="10.0">
                <children>
-                  <Label fx:id="itemDescriptionLabel" prefHeight="27.0" prefWidth="167.0" />
-                  <Label fx:id="priceLabel" prefHeight="27.0" prefWidth="85.0" />
-                  <Label fx:id="taxLabel" prefHeight="27.0" prefWidth="80.0" />
+                  <Label fx:id="itemDescriptionLabel" prefHeight="27.0" prefWidth="110.0" />
+                  <Label fx:id="priceLabel" prefHeight="27.0" prefWidth="65.0" />
+                  <Label fx:id="taxLabel" prefHeight="27.0" prefWidth="65.0" />
+                  <Label fx:id="totalLabel" prefHeight="27.0" prefWidth="65.0" />
                </children>
             </HBox>
-            <TextArea fx:id="soupsaladTextArea" prefHeight="88.0" prefWidth="251.0" />
             <Button fx:id="gardenButton" mnemonicParsing="false" onAction="#gardenButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Garden Salad" />
             <Button fx:id="caesarButton" mnemonicParsing="false" onAction="#caesarButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Caesar Salad" />
             <Button fx:id="chowderButton" mnemonicParsing="false" onAction="#chowderButtonPushed" prefHeight="39.0" prefWidth="278.0" text="Clam Chowder" />

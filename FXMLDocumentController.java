@@ -8,13 +8,13 @@ package seanspub2;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.beans.property.SimpleStringProperty;
+//import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import static javafx.fxml.FXMLLoader.load;
+//import static javafx.fxml.FXMLLoader.load;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -191,7 +191,7 @@ public class FXMLDocumentController implements Initializable
         public ObservableList<MenuItem> getMenuItem()        
         {
             ObservableList<MenuItem> menuItem = FXCollections.observableArrayList();  
-            menuItem.add(new MenuItem("Frank",2.00f,2.00f));
+            menuItem.add(new MenuItem("Frank",2.00f));
             
             return menuItem;
         }

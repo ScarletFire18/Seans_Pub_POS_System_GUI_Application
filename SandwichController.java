@@ -41,6 +41,7 @@ public class SandwichController implements Initializable {
      @FXML private Label itemDescriptionLabel;
      @FXML private Label priceLabel;
      @FXML private Label taxLabel;
+     @FXML private Label totalLabel;
      
      private MenuItem selectedMenuItem;
      
@@ -51,6 +52,7 @@ public class SandwichController implements Initializable {
          itemDescriptionLabel.setText(selectedMenuItem.getItemDescription());
          priceLabel.setText(Float.toString(selectedMenuItem.getPrice()));
          taxLabel.setText(Float.toString(selectedMenuItem.getTax()));  
+         totalLabel.setText(Float.toString(selectedMenuItem.getTotal()));
      }
     
       public void mainButtonPushed(ActionEvent event) throws IOException
@@ -66,37 +68,37 @@ public class SandwichController implements Initializable {
       
          public void chickenButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem chicken = new MenuItem("Chicken Sandwich", 8.50f, 0.00f);
+            MenuItem chicken = new MenuItem("Chicken Sandwich", 8.50f);
             initData(chicken);
         }
        
        public void tunaButtonPushed(ActionEvent event) throws IOException
         {
-            MenuItem tuna = new MenuItem("Tuna Sandwich", 7.00f, 0.00f);
+            MenuItem tuna = new MenuItem("Tuna Sandwich", 7.00f);
             initData(tuna);
         }
        
        public void roastbeefButtonPushed(ActionEvent event) throws IOException
         {
-            MenuItem rb = new MenuItem("Roast Beef Sandwich", 9.00f, 0.00f);
+            MenuItem rb = new MenuItem("Roast Beef Sandwich", 9.00f);
             initData(rb);
         }
         
        public void meatballButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem mb = new MenuItem("Meatball Sandwich", 8.00f, 0.00f);
+            MenuItem mb = new MenuItem("Meatball Sandwich", 8.00f);
             initData(mb);
         }
        
        public void turkeyButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem turkey = new MenuItem("Turkey Sandwich", 7.00f, 0.00f);
+            MenuItem turkey = new MenuItem("Turkey Sandwich", 7.00f);
             initData(turkey);
         }
        
        public void hamButtonPushed(ActionEvent event) throws IOException 
         {
-            MenuItem ham = new MenuItem("Ham Sandwich", 6.50f, 0.00f);
+            MenuItem ham = new MenuItem("Ham Sandwich", 6.50f);
             initData(ham);
         }
     /**

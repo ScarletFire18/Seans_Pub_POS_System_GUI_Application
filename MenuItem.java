@@ -14,13 +14,14 @@ import javafx.beans.property.SimpleStringProperty;
 public class MenuItem 
 {
     private SimpleStringProperty itemDescription;
-    private Float price, tax;
+    private Float price, tax, total;
     
-    public MenuItem(String itemDescription, Float price, Float tax)
+    public MenuItem(String itemDescription, Float price)
     {
         this.itemDescription = new SimpleStringProperty(itemDescription);
-        this.price = new Float(price);
-        this.tax = new Float(tax);
+        this.price = price;
+        this.tax = price * 0.05f;
+        this.total = this.price + this.tax;
     }
 
     public String getItemDescription() {
@@ -35,6 +36,14 @@ public class MenuItem
         return price;
     }
 
+    public Float getTotal() {
+        return total;
+    }
+
+    public void setTotal(Float total) {
+        this.total = total;
+    }
+
     public void setPrice(float price) {
         this.price = price;
     }
@@ -43,7 +52,4 @@ public class MenuItem
         return tax;
     }
 
-    public void setTax(float tax) {
-        this.tax = tax;
-    }
 }
